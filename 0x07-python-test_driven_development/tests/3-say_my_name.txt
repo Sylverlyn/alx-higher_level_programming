@@ -1,0 +1,52 @@
+This module defines a function that prints a full name.
+
+the function def say_my_name(first_name, last_name=""): prints first and last name.
+
+
+importing function.
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+Examples:
+	>>> first_name = 'Cynthia'
+	>>> last_name = 'Mbaogu'
+	>>> say_my_name(first_name, last_name)
+	My name is Cynthia Mbaogu
+
+	>>> say_my_name('Sylver', 'Mbaogu')
+	My name is Sylver Mbaogu
+
+ 
+
+The function will raise a TypeError if non-strings are passed
+Examples:
+	>>> say_my_name(2, 2)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+	>>> say_my_name(7, 'Mbaogu')
+	Traceback (most recent call last):
+                 ...
+        TypeError: first_name must be a string
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+	>>> say_my_name('Cynthia', None)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+	>>> say_my_name(5, None)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+
+
