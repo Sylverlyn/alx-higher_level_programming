@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defines a rectangle."""
+"""Defines the area and perimeter of a rectangle."""
 
 
 class Rectangle:
     """creates a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """initializes the attributes of a rectangle."""
+        """initializes width and height of a rectangle."""
 
         self.width = width
         self.height = height
@@ -38,3 +38,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must >=0")
         self.__height = value
+
+    def area(self):
+        """returns the ares of the rectangle."""
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        """returns the perimeter of the rectangle."""
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
