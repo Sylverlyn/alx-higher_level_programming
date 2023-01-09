@@ -2,11 +2,10 @@
 """Defines the area and perimeter of a rectangle."""
 
 
-no of instances = 0
-
-
 class Rectangle:
     """creates a rectangle."""
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """initializes width and height of a rectangle."""
@@ -71,4 +70,4 @@ class Rectangle:
     def __del__(self):
         """deletes an instance."""
         print("Bye rectangle...")
-        Rectangle.no of instances -= 1
+        Rectangle.number_of_instances -= 1
