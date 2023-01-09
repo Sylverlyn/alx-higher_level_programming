@@ -59,4 +59,4 @@ class Rectangle:
 
                 rec += "#"
             rec += '\n'
-        return (rec)
+        return (rec[:-1])
