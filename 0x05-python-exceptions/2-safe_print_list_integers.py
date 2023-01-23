@@ -5,7 +5,7 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
             list += 1	
 
-        except Exception:
+        except (ValueError, TypeError):
             pass
     print()
     return list	
