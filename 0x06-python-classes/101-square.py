@@ -41,18 +41,21 @@ class Square:
     def size(self, value):
         """sets/assigns a new value to the attribute."""
         if type(value) is not int:
-            raise ValueError("size must be an integer")
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
 
-    def my_print(self):
+    def __str__(self):
         """prints the character # to the stdout"""
         if self.__size == 0:
-            print()
+            return ""
+        square = ""
 
         for i in range(self.__position[1]):
-            print()
+            square += "\n"
         for j in range(self.__size):
-            print(" "*self.__position[0], end="")
-            print("#"*self.__size)
+            square += " "*self.__position[0]
+            square += "#"*self.__size
+            square += "\n"
+        return square
