@@ -27,10 +27,10 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not all(isinstance(i, int)for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif not all(x>=0 for x in value):
+        elif not all(x >= 0 for x in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-        self.__position = value
+            self.__position = value
 
     @property
     def size(self):
