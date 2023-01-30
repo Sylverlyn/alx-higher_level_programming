@@ -74,8 +74,9 @@ class Rectangle:
         """compares Rectangles."""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
+        elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() > rect_2.area():
+
+        if rect_2.area() > rect_1.area():
             return rect_2
         return rect_1
