@@ -6,33 +6,33 @@ class Rectangle:
     """creates a class Rectangle."""
     def __init__(self, width=0, height=0):
         """initialises the Rectangle object."""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """retrieves the current width of the attribute."""
+        """retrieves the current width of the object."""
         return self.__width
 
     @width.setter
-    def width(self, value):
-        """sets the new value of the attribute."""
-        if type(value) is not int:
+    def width(self, width):
+        """sets the new value of the object."""
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        self.__width = width
 
     @property
     def height(self):
-        """retrieves the current height of the attribute."""
+        """retrieves the current height of the object."""
         return self.__height
 
     @height.setter
-    def height(self, value):
-        """sets the new value of the attribute."""
+    def height(self, height):
+        """sets the new value of the object."""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         elif height < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        self.__height = height
