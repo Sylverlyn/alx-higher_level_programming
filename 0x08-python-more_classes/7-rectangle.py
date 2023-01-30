@@ -53,8 +53,6 @@ class Rectangle:
 
     def __str__(self):
         """gets the string representation of the object."""
-        if self.__width == 0 or self.__height == 0:
-            return ""
         Rect = ""
         for row in range(self.__height):
             for colm in range(self.__width):
@@ -69,4 +67,4 @@ class Rectangle:
     def __del__(self):
         """deletes an instance of Rectangle."""
         Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")i
+        print("Bye rectangle...")
