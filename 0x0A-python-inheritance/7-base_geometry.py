@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-"""This module creates an empty class."""
+"""Defines an empty Basegeometry class"""
 
 
-class BaseGeometry():
-    """Nothing is passed. raises an exception."""
+class BaseGeometry:
+    """raises an Exception with the message area() is not implemented
+    """
 
     def area(self):
-        """defines the area fundtion.""" 	    
-        raise Exception("area() is not implemented")
+        """raises an Exception with the message area() is not implemented
+        """
+        raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        """ function that validates value"""
         if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-
+            raise TypeError(f'{name} must be an integer')
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError(f'{name} must be greater than 0')
