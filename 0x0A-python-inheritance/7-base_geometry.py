@@ -4,14 +4,13 @@
 
 class BaseGeometry():
     """Nothing is passed."""
-    pass
 
     def area(self):
         """defines the area fundtion.""" 	    
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ function validates value"""
+        """ function that validates value"""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
 
