@@ -3,7 +3,7 @@
 
 
 class BaseGeometry():
-    """Nothing is passed."""
+    """Nothing is passed. raises an exception."""
 
     def area(self):
         """defines the area fundtion.""" 	    
