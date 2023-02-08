@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-7-add_item module
-"""
+""" adds all arguments to a Python list, and then save them to a file"""
+
+
 import sys
 import json
 import os.path
