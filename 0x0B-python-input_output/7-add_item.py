@@ -14,7 +14,7 @@ if os.path.isfile(file):
     my_list = load_from_json_file(file)
 
 else:
-my_list = []
+    my_list = []
 for i in range(1, len(sys.argv)):
     my_list.append(sys.argv[i])
 
