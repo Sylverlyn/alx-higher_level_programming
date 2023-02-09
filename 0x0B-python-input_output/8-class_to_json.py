@@ -1,7 +1,8 @@
 #!usr/bin/python3
 """class to object."""
 
+
 def class_to_json(obj):
-    """returns data structured for JSON
+    """returns data structure for JSON
     serialization of object."""
-    return JSON.dumps(obj)	
+    return obj.__dict__
