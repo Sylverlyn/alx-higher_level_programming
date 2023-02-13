@@ -19,7 +19,7 @@ Now use it:
     96
 
     >>> add_integer(100.3, -2)
-    98.3
+    98
 
     >>> add_integer(4, "School")
     Traceback (most recent call last):
