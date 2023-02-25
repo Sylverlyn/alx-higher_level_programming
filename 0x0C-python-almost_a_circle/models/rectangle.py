@@ -83,8 +83,20 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns string representation of the class"""
-        return (f"[{self.__class__.__name__}], ({self.id}) {self.x}/{self.y} -
-                {self.width}/{self.height}")
+        return (f"[{self.__class__.__name__}], ({self.id}) {self.x}/{self.y}-{self.width}/{self.height}")
 
-    def update(self, *args):
-        """assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """assigns each argument to a corresponding attribute"""
+        #if args is not None and len(args) is not 0:
+        attributes = ("id", "width", "height", "x", "y")
+        if args:           
+            for index, value in enumerate(args):
+                setattr(self, attributes[index], value)
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of the object."""
+        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}            
