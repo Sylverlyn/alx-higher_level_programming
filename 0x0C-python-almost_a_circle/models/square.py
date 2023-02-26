@@ -11,7 +11,7 @@ class Square(Rectangle):
         
     def __str__(self):
         """returns string representation of square object"""
-        return (f"[{self.__class__.__name__}] ({self.id}) ({self.x}) / ({self.y})-({self.width})")
+        return (f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} - {self.size}")
     
     @property
     def size(self):
@@ -20,24 +20,15 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """sets the size"""
+        """sets the new size"""
         self.width = value
-            
-    @property
-    def size(self):
-       """returns the size"""
-       return self.height
+        self.height = value    
     
-    @size.setter
-    def size(self, value):
-        """sets the size"""
-        self.height = value
-
     def update(self, *args, **kwargs):
         """assigns each argument to corresponding attribute"""
         #attributes = ("id", "size", "x","y")
         if args:
-            attributes = ("id", "size", "x","y")          
+            attributes = ("id", "size", "x", "y")          
             for i, value in enumerate(args):
                 setattr(self, attributes[i], value)
 
