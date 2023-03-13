@@ -21,8 +21,10 @@ def matrix_divided(matrix, div):
 
     new_matrix = []
     
-    r row in matrix:
+    for row in matrix:
+        new_row = []
         for x in row:
             result = x / div	
-            new_matrix.append(round(result, 2))
-    return ([new_matrix])
+            new_row.append(round(result, 2))
+        new_matrix.append(new_row)    
+    return new_matrix
