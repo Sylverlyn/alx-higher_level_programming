@@ -5,4 +5,5 @@
 
 CREATE TABLE IF NOT EXISTS force_name(
 id INT
-name VARCHAR != NULL);
+name VARCHAR(256) != NULL
+);
